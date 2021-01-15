@@ -8,20 +8,26 @@ export default function Resume({ toppings, total}) {
         <div className={"Resumen"}>
             <h3>Resumen</h3>
             <table>
+                <thead>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Precio</th>
                 </tr>
+                </thead>
+                <tbody>
                 {toppings.map((topping,idx) =>(
-                    <tr>
+                    <tr key={`${idx} row`}>
                         <td key ={`${idx} topping`}>{topping.producto}</td>
                         <td key ={`${idx} price`}> $ {topping.precio}</td>
-                    </tr>
+                    </tr> 
                 ))}
+                </tbody>
+                <tfoot>
                 <tr>
                     <th>Total</th>
                     <th>$ {total} </th>
                 </tr>
+                </tfoot>
             </table>
         </div>
     )

@@ -1,16 +1,17 @@
-import firebase from 'firebase/app';
 import 'firebase/firestore'
+//import firebase from 'firebase/app';
+import {db} from './firebaseConfig';
 
-const db = firebase.firestore();
 
 async function newPizza (orderObj) {
 	try {
-		const order = await db.collection('order').add({
+		const order = await db.collection('pizzas').add({
+      pizzaName: orderObj.pizzaName,
       name: orderObj.name,
-      uid: orderObj.uid,
-      time: orderObj.time,
+      phone: orderObj.phone,
       products: orderObj.products,
       totalOrder: orderObj.totalOrder,
+      date: orderObj.date,
     });
 
 		return order;
