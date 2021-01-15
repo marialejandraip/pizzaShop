@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Formulario final de nombre y telefono 
 export default function Form({ pizzaName, setName, setPhone , day, month, year }) {
     
     return (
