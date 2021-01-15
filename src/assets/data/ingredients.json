@@ -1,0 +1,58 @@
+{
+    "ingredients":{
+        "Pollo":{
+            "precio":5000
+        },
+        "Peperoni":{
+            "precio":4500
+        },
+        "Aceitunas":{
+            "precio": 3000
+        },
+        "Champiñones": {
+            "precio":3000
+        },
+        "Albahaca": {
+            "precio":3000
+        },
+        "Rugula": {
+            "precio":3000
+        },
+        "Tomate": {
+            "precio":3000
+        },
+        "Queso Mozarella": {
+            "precio":3000
+        },
+        "Cebolla": {
+            "precio":3000
+        },
+        "Maíz": {
+            "precio":3000
+        },
+        "Pepinillos": {
+            "precio":3000
+        },
+        "Salami": {
+            "precio":3000
+        },
+        "Jamón": {
+            "precio":3000
+        },
+        "Pimentón en rodaja": {
+            "precio":3000
+        },
+        "Brocoli":{
+            "precio":3000
+        },
+        "Berenjena":{
+            "precio":3000
+        },
+        "Jamón serrano":{
+            "precio":3000
+        },
+        "Queso parmesano":{
+            "precio":3000
+        }
+    }
+}

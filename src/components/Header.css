@@ -1,0 +1,24 @@
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
+  }
+
+.Header-nav{
+    background-color: #292929;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+}
+
+.Nav-container {
+    font-size: 1.5em;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Image-nav img{
+    height: 50px;
+}

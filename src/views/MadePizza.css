@@ -1,0 +1,107 @@
+.Banner-pizza{
+    background-image: url('../assets/images/Table.svg');
+    height: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.Container-crearPizza h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    font-weight: normal;
+    font-size: 3em;
+    margin-top: 0;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.name-input{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 1.5em;
+    margin: 0 45px;
+}
+
+.Container-ingredientes {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    color:#292929;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-items: center;
+    margin: 20px 40px;
+    height: 450px;
+}
+
+.Container-ingredientes h2 {
+    font-weight: normal;
+    font-size: 1.5em;
+    margin: 0 0 20 0;
+    padding-bottom: 10px;
+}
+
+.Container-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.1em;
+}
+
+.Container-products label {
+    width: 30%;
+    margin:10px;
+}
+
+.Input-PizzaName, .Input-Name, .Input-Phone{
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    height: 30px;
+    border-style: none;
+}
+
+.container-last {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-lastform {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin: 40px;
+    padding: 40px;
+    width: 50%;
+}
+.container-lastform label, p {
+    font-size: 1.2em;
+    width: 75%;
+    margin:5px 0;
+
+}
+
+.container-lastform h4 {
+    font-size: 1.5em;
+}
+.container-lastform input {
+    width: 100%;
+    margin:2px;
+}
+.button-form {
+    width: 30%;
+    font-size: 1.1em;
+    background-color: #292929;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    color: white;
+    height: 50px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
