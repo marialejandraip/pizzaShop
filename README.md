@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+<p align="center"> <img src="src/assets/images/banner.svg" width="1000"> </p>
+
+# Pizza Shop 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

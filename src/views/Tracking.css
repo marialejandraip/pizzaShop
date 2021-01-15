@@ -1,5 +1,24 @@
 .Banner-tracking{
-    background-image: url('../assets/images/track.svg');
+    background-image: url('../assets/images/Table.svg');
     height: 80px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.table-tracking{
+    color:white;
+    font-size: 1.3em;
+    margin: 40px;
+    width: 95%;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    font-weight: normal;
+    font-size: 3em;
+    margin-top: 0;
+    padding: 20px;
+    border-bottom: 1px solid white;
 }

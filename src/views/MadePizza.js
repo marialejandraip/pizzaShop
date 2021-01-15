@@ -18,40 +18,43 @@ export default function MadePizza() {
 
     const ingredientes = Object.keys(Data.ingredients);
 
+//Estados para ir actualizando el objeto de pedido
     const [pizzaName, setPizzaName] = useState('');
     const [toppings, setToppings] = useState([{producto:'Masa base', precio:10000}]);
     const [total, setTotal]= useState(0);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
 
+//Fecha de la orden
     let d = new Date();
     let day = d.getDate();
     let month = d.getMonth();
     let year = d.getFullYear();
 
+//Estructura del pedido 
     let objOrder = {
         pizzaName: pizzaName,
         name: name,
         phone: phone,
         products: toppings,
         totalOrder: total,
+        time: d,
         date: `${day}/${month+1}/${year}`,
     } 
 
+//Submit de la orden para actualizar el tracking de ordenes 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Si estoy acá ?")
         console.log(objOrder)
         console.log(newPizza(objOrder))
         newPizza(objOrder)
         e.target.reset();
-        setToppings([{producto:'Masa base', precio:10000}]);
     }
 
-
+//El total depende de la cantidad de ingredientes que se le agregue a la pizza
     useEffect(() => {
         setTotal(toppings.reduce((finalTotal, { precio }) => finalTotal + precio, 0))
-      }, [toppings, setToppings])
+    }, [toppings, setToppings])
 
     return (
         <div>

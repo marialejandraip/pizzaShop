@@ -10,7 +10,8 @@ async function newPizza (orderObj) {
       phone: orderObj.phone,
       products: orderObj.products,
       totalOrder: orderObj.totalOrder,
-      date: orderObj.date,
+	  date: orderObj.date,
+	  time: orderObj.time,
     });
 	return order;
 	} catch (error) {
@@ -19,7 +20,7 @@ async function newPizza (orderObj) {
 };
 
 function snapshotGettingData(collection, arrayData, setState) {
-	db.collection(collection).onSnapshot((querySnapshot) => {
+	db.collection(collection).orderBy('time', 'desc').onSnapshot((querySnapshot) => {
 		
 		querySnapshot.forEach((doc) => {
 			const data = doc.data()
