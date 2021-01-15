@@ -2,6 +2,14 @@
 
 # Pizza Shop 
 
+expliques que librerías usaste y como hiciste para solucionar el el problema. Y la forma de ejecutarlo.
+
+* [x] Seleccionar de una lista de 15 ingredientes los que podrá tener la pizza, con diferente precio algunos ingredientes.
+* [x] La cuenta de la orden empieza contando el precio de la base que son $10000. 
+* [x] La orden de la pizza debe tener un nombre, teléfono, nombre de la pizza, la orden de ingredientes, el total de la compra.
+* [x] Se debe poder conocer el tracking de ventas en un tablero. (tabla)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
