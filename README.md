@@ -2,6 +2,9 @@
 
 # Pizza Shop 
 
+expliques que librerías usaste y como hiciste para solucionar el el problema. Y la forma de ejecutarlo.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
