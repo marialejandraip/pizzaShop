@@ -18,20 +18,20 @@ export default function MadePizza() {
 
     const ingredientes = Object.keys(Data.ingredients);
 
-//Estados para ir actualizando el objeto de pedido
+    //Estados para ir actualizando el objeto de pedido
     const [pizzaName, setPizzaName] = useState('');
     const [toppings, setToppings] = useState([{producto:'Masa base', precio:10000}]);
     const [total, setTotal]= useState(0);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
 
-//Fecha de la orden
+    //Fecha de la orden
     let d = new Date();
     let day = d.getDate();
     let month = d.getMonth();
     let year = d.getFullYear();
 
-//Estructura del pedido 
+    //Estructura del pedido 
     let objOrder = {
         pizzaName: pizzaName,
         name: name,
@@ -42,12 +42,12 @@ export default function MadePizza() {
         date: `${day}/${month+1}/${year}`,
     } 
 
-//Submit de la orden para actualizar el tracking de ordenes 
+   //Submit de la orden para actualizar el tracking de ordenes 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(objOrder)
-        console.log(newPizza(objOrder))
-        newPizza(objOrder)
+        newPizza(objOrder);
+        setToppings([{producto:'Masa base', precio:10000}]);
+        setPizzaName('');
         e.target.reset();
     }
 
@@ -57,57 +57,60 @@ export default function MadePizza() {
     }, [toppings, setToppings])
 
     return (
-        <div>
-            <NavBar nav ={nav} />
-            <div className="Banner-pizza"></div>
-            <div className="Container-crearPizza">
-            <h1>Crea tu pizza</h1>
+    <>
+    <NavBar nav ={nav} />
+    <div className="Banner-pizza"></div>
+    <div className="Container-crearPizza">
+        <h1>Crea tu pizza</h1>
+        <form onSubmit={handleSubmit} >
 
-            <form onSubmit={handleSubmit} >
-                <label className="name-input">
-                Nombre de la pizza:
-                    <input 
-                    type="text" 
-                    name="name" 
-                    className="Input-PizzaName" 
-                    placeholder='  Aquí el nombre de tu pizza' 
-                    onChange={(e)=>setPizzaName(e.target.value)} 
+            <label className="name-input">
+            Nombre de la pizza:
+              <input 
+                type="text" 
+                name="name" 
+                className="Input-PizzaName" 
+                placeholder='  Aquí el nombre de tu pizza' 
+                onChange={(e)=>setPizzaName(e.target.value)} 
+                />
+            </label>
+
+            <div className='Container-ingredientes'>
+                <h2>Ingredientes</h2>
+
+                <div className="Container-products">
+                    {ingredientes.map((product, idx) =>(
+                    <Ingredients 
+                        key={`${idx}`}
+                        product={product}
+                        idx={idx}
+                        ingredientes={ingredientes}
+                        Data = {Data.ingredients}
+                        setToppings ={setToppings}
+                        toppings={toppings}
                     />
-                </label>
-                <div className='Container-ingredientes'>
-                  <h2>Ingredientes</h2>
-                  <div className="Container-products">
-                  {ingredientes.map((product, idx) =>(
-                       <Ingredients 
-                       key={`${idx}`}
-                       product={product}
-                       idx={idx}
-                       ingredientes={ingredientes}
-                       Data = {Data.ingredients}
-                       setToppings ={setToppings}
-                       toppings={toppings}
-                       />
-                  ))
-                  }
-                  </div>
+                    ))}
                 </div>
-                <div className="container-last">
-                    <Form 
-                    pizzaName={pizzaName}
-                    setName ={setName}
-                    setPhone ={setPhone}
-                    day={day}
-                    month={month}
-                    year={year}
-                    />
-                    <Resume 
-                    toppings={toppings}
-                    total={total} 
-                    />
-                </div>
-            </form>
             </div>
-            <Footer />
-        </div>
-    )
+
+            <div className="container-last">
+              <Form 
+                pizzaName={pizzaName}
+                setName ={setName}
+                setPhone ={setPhone}
+                day={day}
+                month={month}
+                year={year}
+              />
+
+              <Resume 
+                toppings={toppings}
+                total={total} 
+              />
+            </div>
+        </form>
+    </div>
+    <Footer />
+  </>
+  )
 };

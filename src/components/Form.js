@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Formulario final de nombre y telefono 
 export default function Form({ pizzaName, setName, setPhone , day, month, year }) {
     
     return (
@@ -29,8 +30,7 @@ export default function Form({ pizzaName, setName, setPhone , day, month, year }
             />
         </label>
         <label> 
-            
-            <p>{`Fecha: ${day}/${month+1}/${year}`}</p>
+          <p>{`Fecha: ${day}/${month+1}/${year}`}</p>
         </label>
         <button type="submit" className="button-form" >Guardar</button>
     </div>

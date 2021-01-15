@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import './Resume.css'
+import './Resume.css';
 
-export default function Resume({ toppings, total}) {
+export default function Resume({ toppings, total }) {
 
     return (
         <div className={"Resumen"}>
