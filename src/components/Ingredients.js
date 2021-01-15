@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-export default function Ingredients({ product, idx, setToppings, toppings, Data}) {
+export default function Ingredients({ product, idx, setToppings, toppings, Data }) {
 
     const [checked, setChecked] = useState(false)
     
