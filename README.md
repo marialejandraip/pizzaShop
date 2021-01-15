@@ -45,10 +45,19 @@ a/ Como dije antes estaba entre las dos opciones de usar local storage o firebas
 a/ dividi el formulario que se debia llenar en varios componentes, para poder jugar un poquito con el diseño que propuse. 
 
 ¿Qué manera podría usar para ver la información de las ordenes?
+
 a/ Creo que las tablas ayudan mucho a la organización de los datos. Por eso muestro todo en tabla. 
 
 ¿Usar preprocesadores o alguna libreria para estilos?
-a/ Css puro es mucho más fácil para mi que aún no he practicado con preprocesadores o librerias y más cuando hay poquito tiempo para presentarlo. 
+
+a/ Css puro es mucho más fácil para mi que aún no he practicado con preprocesadores o librerias y más cuando hay poquito tiempo para presentarlo.
+
+¿La info inicial dónde?
+
+a/ Hay un json con los datos de todos los productos. 17 en total. 
 
 ¿Debía hacer pruebas o test?
+
 a/ Creo que para esto también se requeria más tiempo. No lo hice :(
+
+

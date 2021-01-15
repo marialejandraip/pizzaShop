@@ -45,10 +45,10 @@ export default function MadePizza() {
    //Submit de la orden para actualizar el tracking de ordenes 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(objOrder)
-        newPizza(objOrder)
-        e.target.reset();
+        newPizza(objOrder);
         setToppings([{producto:'Masa base', precio:10000}]);
+        setPizzaName('');
+        e.target.reset();
     }
 
 //El total depende de la cantidad de ingredientes que se le agregue a la pizza
@@ -63,6 +63,7 @@ export default function MadePizza() {
     <div className="Container-crearPizza">
         <h1>Crea tu pizza</h1>
         <form onSubmit={handleSubmit} >
+
             <label className="name-input">
             Nombre de la pizza:
               <input 
@@ -73,6 +74,7 @@ export default function MadePizza() {
                 onChange={(e)=>setPizzaName(e.target.value)} 
                 />
             </label>
+
             <div className='Container-ingredientes'>
                 <h2>Ingredientes</h2>
 
@@ -90,8 +92,8 @@ export default function MadePizza() {
                     ))}
                 </div>
             </div>
-            <div className="container-last">
 
+            <div className="container-last">
               <Form 
                 pizzaName={pizzaName}
                 setName ={setName}
