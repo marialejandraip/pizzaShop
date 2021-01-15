@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NavBar from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Tracking() {
 
@@ -12,7 +13,7 @@ export default function Tracking() {
     return (
         <div>
             <NavBar nav ={nav} />
-            
+            <Footer />
         </div>
     )
 }
