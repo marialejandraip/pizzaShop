@@ -3,8 +3,10 @@ import Data from '../assets/data/ingredients.json';
 
 import NavBar from '../components/Header';
 import Ingredients from '../components/Ingredients';
+import Form from '../components/Form';
 import Resume from '../components/Resume';
 import Footer from '../components/Footer';
+
 import './MadePizza.css'
 
 export default function MadePizza() {
@@ -13,16 +15,13 @@ export default function MadePizza() {
         {route: '/Tracking', name:'Tracking'}
     ]
 
+    const ingredientes = Object.keys(Data.ingredients);
+
     const [pizzaName, setPizzaName] = useState('');
     const [toppings, setToppings] = useState([{producto:'Masa base', precio:10000}]);
     const [total, setTotal]= useState(0);
 
-    let d = new Date();
-    let day = d.getDate();
-    let month = d.getMonth();
-    let year = d.getFullYear();
-    
-    const ingredientes = Object.keys(Data.ingredients);
+   
 
     useEffect(() => {
         setTotal(toppings.reduce((finalTotal, { precio }) => finalTotal + precio, 0))
@@ -37,7 +36,13 @@ export default function MadePizza() {
             <form>
                 <label className="name-input">
                 Nombre de la pizza:
-                    <input type="text" name="name" className="Input-PizzaName" onChange={(e)=>setPizzaName(e.target.value)} />
+                    <input 
+                    type="text" 
+                    name="name" 
+                    className="Input-PizzaName" 
+                    placeholder='  Aquí el nombre de tu pizza' 
+                    onChange={(e)=>setPizzaName(e.target.value)} 
+                    />
                 </label>
                 <div className='Container-ingredientes'>
                   <h2>Ingredientes</h2>
@@ -49,33 +54,20 @@ export default function MadePizza() {
                   />
                 </div>
                 <div className="container-last">
-                <div className="container-lastform">
-                    <h4>Para terminar tu pizza responde...</h4>
-                    <label> 
-                        <p>Nombre de la pizza: {pizzaName}</p>
-                    </label>
-                    <label> 
-                        Nombre: 
-                        <input type="text" name="name" className="Input-Name" />
-                    </label>
-                    <label> 
-                        Teléfono: 
-                        <input type="text" name="name" className="Input-Phone" />
-                    </label>
-                    <label> 
-                        
-                        <p>{`Fecha: ${day}/${month+1}/${year}`}</p>
-                    </label>
-                    <button className="button-form">Guardar</button>
-                </div>
-                <Resume 
-                toppings={toppings}
-                total={total} 
-                />
+                    <Form 
+                    pizzaName={pizzaName}
+                    toppings={toppings}
+                    total = {total}
+                    />
+              
+                    <Resume 
+                    toppings={toppings}
+                    total={total} 
+                    />
                 </div>
             </form>
             </div>
             <Footer />
         </div>
     )
-}
+};
