@@ -1,32 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import {newPizza} from '../firebaseFunction';
-
-export default function Form({ pizzaName, toppings, total }) {
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-
-    let d = new Date();
-    let day = d.getDate();
-    let month = d.getMonth();
-    let year = d.getFullYear();
-
-    let objOrder = {
-        pizzaName: pizzaName,
-        name: name,
-        phone: phone,
-        products: toppings,
-        totalOrder: total,
-        date: `${day}/${month+1}/${year}`,
-    } 
-
-    const handleSubmit = () => {
-
-        newPizza(objOrder);
-        setName('');
-        setPhone('');
-    }
-
+export default function Form({ pizzaName, setName, setPhone , day, month, year }) {
+    
     return (
         <div className="container-lastform">
         <h4>Para terminar tu pizza responde...</h4>
@@ -57,7 +32,7 @@ export default function Form({ pizzaName, toppings, total }) {
             
             <p>{`Fecha: ${day}/${month+1}/${year}`}</p>
         </label>
-        <button className="button-form" >Guardar</button>
+        <button type="submit" className="button-form" >Guardar</button>
     </div>
     )
 }

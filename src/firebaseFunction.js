@@ -1,6 +1,5 @@
 import 'firebase/firestore'
-//import firebase from 'firebase/app';
-import {db} from './firebaseConfig';
+import { db } from './firebaseConfig';
 
 
 async function newPizza (orderObj) {
@@ -13,8 +12,7 @@ async function newPizza (orderObj) {
       totalOrder: orderObj.totalOrder,
       date: orderObj.date,
     });
-
-		return order;
+	return order;
 	} catch (error) {
 		return error.message;
 	}

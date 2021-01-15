@@ -8,6 +8,7 @@ import Resume from '../components/Resume';
 import Footer from '../components/Footer';
 
 import './MadePizza.css'
+import {newPizza} from '../firebaseFunction';
 
 export default function MadePizza() {
     const nav = [
@@ -20,8 +21,33 @@ export default function MadePizza() {
     const [pizzaName, setPizzaName] = useState('');
     const [toppings, setToppings] = useState([{producto:'Masa base', precio:10000}]);
     const [total, setTotal]= useState(0);
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
 
-   
+    let d = new Date();
+    let day = d.getDate();
+    let month = d.getMonth();
+    let year = d.getFullYear();
+
+    let objOrder = {
+        pizzaName: pizzaName,
+        name: name,
+        phone: phone,
+        products: toppings,
+        totalOrder: total,
+        date: `${day}/${month+1}/${year}`,
+    } 
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Si estoy acá ?")
+        console.log(objOrder)
+        console.log(newPizza(objOrder))
+        newPizza(objOrder)
+        e.target.reset();
+        setToppings([{producto:'Masa base', precio:10000}]);
+    }
+
 
     useEffect(() => {
         setTotal(toppings.reduce((finalTotal, { precio }) => finalTotal + precio, 0))
@@ -33,7 +59,8 @@ export default function MadePizza() {
             <div className="Banner-pizza"></div>
             <div className="Container-crearPizza">
             <h1>Crea tu pizza</h1>
-            <form>
+
+            <form onSubmit={handleSubmit} >
                 <label className="name-input">
                 Nombre de la pizza:
                     <input 
@@ -46,20 +73,30 @@ export default function MadePizza() {
                 </label>
                 <div className='Container-ingredientes'>
                   <h2>Ingredientes</h2>
-                  <Ingredients 
-                  ingredientes={ingredientes}
-                  Data = {Data.ingredients}
-                  setToppings ={setToppings}
-                  toppings={toppings}
-                  />
+                  <div className="Container-products">
+                  {ingredientes.map((product, idx) =>(
+                       <Ingredients 
+                       key={`${idx}`}
+                       product={product}
+                       idx={idx}
+                       ingredientes={ingredientes}
+                       Data = {Data.ingredients}
+                       setToppings ={setToppings}
+                       toppings={toppings}
+                       />
+                  ))
+                  }
+                  </div>
                 </div>
                 <div className="container-last">
                     <Form 
                     pizzaName={pizzaName}
-                    toppings={toppings}
-                    total = {total}
+                    setName ={setName}
+                    setPhone ={setPhone}
+                    day={day}
+                    month={month}
+                    year={year}
                     />
-              
                     <Resume 
                     toppings={toppings}
                     total={total} 

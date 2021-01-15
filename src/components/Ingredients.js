@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 
-export default function Ingredients({ ingredientes, setToppings, toppings, Data }) {
+export default function Ingredients({ product, idx, setToppings, toppings, Data }) {
 
     const [checked, setChecked] = useState(false)
     const precio = Object.values(Data)
-    console.log(precio)
     
 
     /* if(checkbox.checked === true){
@@ -13,13 +12,11 @@ export default function Ingredients({ ingredientes, setToppings, toppings, Data 
     } */
     
     return (
-        <div className="Container-products">
-            {ingredientes.map((product, idx)=>(
+        <div>
                 <label key={`${idx}`}>
-                    <input type='checkbox' checked= {checked} onChange={(e) =>{setToppings([...toppings, {producto: product, precio:precio[idx].precio}]); console.log(checked)}}/>
+                    <input type='checkbox' checked= {checked} onChange={(e) =>{setToppings([...toppings, {producto: product, precio:precio[idx].precio}]); setChecked(true);}}/>
                     {`${product}`}
                 </label>
-            ))}
         </div>
     )
 }
