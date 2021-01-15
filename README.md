@@ -50,3 +50,5 @@ a/ Creo que las tablas ayudan mucho a la organización de los datos. Por eso mue
 ¿Usar preprocesadores o alguna libreria para estilos?
 a/ Css puro es mucho más fácil para mi que aún no he practicado con preprocesadores o librerias y más cuando hay poquito tiempo para presentarlo. 
 
+¿Debía hacer pruebas o test?
+a/ Creo que para esto también se requeria más tiempo. No lo hice :(
