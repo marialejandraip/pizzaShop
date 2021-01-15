@@ -38,7 +38,7 @@ correr `npm start` que abrirá el local host http://localhost:3000 para verlo en
 
 ¿Dónde almacenar la información de las ordenes?
 
-a/ Como dije antes estaba entre las dos opciones de usar local storage o firebase, pero he usado más firebase en la mayoria de proyectos entonces opte por esa opción.
+a/ Estaba entre las dos opciones de usar local storage o firebase, pero estoy familiarizada más con firebase y así que por el tiempo establecida era la herramienta que preferi usar.
 
 ¿Manejar un formulario con varios inputs que podrian ser varios componentes? 
 
