@@ -20,7 +20,7 @@ Usé [react-router](https://reactrouter.com/web/guides/quick-start) para el rute
 Encontré una libreria para formularios que en está ocasion no usaré pero que me parecio importante conocerla. [react Hook Form](https://react-hook-form.com/get-started).
 
 ## Prototipado
-<p align="center"> <img src="src/assets/images/Prototipo.svg" width="1000"> </p>
+<p align="center"> <img src="src/assets/images/Prototipo.png" width="1000"> </p>
 
 ## Cómo ejecutar la web app.
 
