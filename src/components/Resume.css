@@ -1,0 +1,21 @@
+.Resumen {
+    color: white;
+    font-size: 1.5em;
+    padding-left: 40px;
+}
+
+.Resumen h3 {
+    margin-top: 40px;
+    border-bottom: 1px solid white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
