@@ -7,6 +7,7 @@ import './Tracking.css';
 import {snapshotGettingData} from '../firebaseFunction';
 
 export default function Tracking() {
+    //Navegacion del router. 
     const nav = [
         {route: '/', name:'Crear Pizza'}, 
         {route: '/Tracking', name:'Tracking'}
@@ -14,6 +15,7 @@ export default function Tracking() {
 
       const [orderMaked, setOrderMaked]= useState([]);
 
+      //se usa UseEffect para manejar la asincronia de las funciones de firebase
       useEffect(()=>{
         const arrayData = [];
         snapshotGettingData('pizzas', arrayData, setOrderMaked);

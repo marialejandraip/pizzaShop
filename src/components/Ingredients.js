@@ -8,7 +8,6 @@ export default function Ingredients({ product, idx, setToppings, toppings, Data 
     
     const reviewChecked = (checked, idx) => {
         setChecked(!checked);
-        console.log(checked)
         if(checked === true){
             setToppings(toppings.filter((p,index) => p.idx !== product.idx))
         }
