@@ -37,33 +37,35 @@ Instalar los paquetes que instalé con `npm install`.
 
 Correr `npm start` que abrirá el local host http://localhost:3000 para verlo en el navegador. 
 
+**El desplegado se encuentra [AQUI](https://marialejandraip.github.io/pizzaShop/#/)**
+
 ## Q&A
 
-- ¿Dónde almacenar la información de las ordenes?
+- *¿Dónde almacenar la información de las ordenes?*
 
 Estaba entre las dos opciones de usar local storage o firebase, pero estoy familiarizada más con firebase y así que por el tiempo establecida era la herramienta que preferi usar, además de muchas funcionalidades que facilitaron su uso. Pensando también que se puede hacer un proyecto escalable partiendo de esto. 
 
-- ¿Manejar un formulario con varios inputs que podrian ser varios componentes? 
+- *¿Manejar un formulario con varios inputs que podrian ser varios componentes?*
 
 Dividí el formulario que se debia completar, en varios componentes, para poder jugar un poco más con el diseño que propuse y para distribuir mejor los espacios. 
 
-- ¿Qué manera podría usar para ver la información de las ordenes?
+- *¿Qué manera podría usar para ver la información de las ordenes?*
 
 Creo que las tablas ayudan mucho a la organización y visualización de los datos. Por eso muestro el resumen y la información de las ordenes en tabla. 
 
-- ¿Usar preprocesadores o alguna libreria para estilos?
+- *¿Usar preprocesadores o alguna libreria para estilos?*
 
 He utilizado Css, porque por tiempo se me facilitaba más. En una futura iteracion podría implementar algún preprocesador como sass o alguna libreria.  
 
-- ¿Dónde encuentro la info inicial?
+- *¿Dónde encuentro la info inicial?*
 
 Hay un json con los datos de todos los productos. 17 en total. 
 
-- ¿Debía hacer pruebas o test?
+- *¿Debía hacer pruebas o test?*
 
 Creo que para esto también se requeria más tiempo. No lo hice :(
 
-- ¿Qué mejoraria en una próxima iteración?
+- *¿Qué mejoraria en una próxima iteración?*
 
 En este momento selecciona varios ingredientes sin la posibilidad de retirar algún producto de la lista. Considero que es importante para la experiencia de usuario.
 
